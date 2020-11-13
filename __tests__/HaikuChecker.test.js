@@ -1,4 +1,6 @@
-import  syllableCounter  from "../src/js/HaikuChecker.js";
+import  { syllableCounter, haikuCount }  from "../src/js/HaikuChecker.js";
+
+
   describe('Recursive approach to counting syllables', () => {
     test('recursive function', () => {
       expect(syllableCounter('cat')).toEqual(1);
@@ -20,5 +22,10 @@ import  syllableCounter  from "../src/js/HaikuChecker.js";
         expect(syllableCounter('Hilarious')).toEqual(4);
         
         });
+
+        test('HaikuCount', () => {
+          expect(haikuCount('An old silent pond')('A frog jumps into the pond')('splash! Silence again')).toEqual(true);
+          
+          });
   
 })
